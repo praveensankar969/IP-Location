@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(){  
-    this.httpService.GetLocation().subscribe(res=> this.locData = res);
+    this.httpService.GetLocation().subscribe(res=> {this.locData = res; console.log(res)});
   }
 
   OnClick(){
