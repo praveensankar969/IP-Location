@@ -1,0 +1,7 @@
+{
+    "/check/*": {
+        "target": "http://api.ipstack.com",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
