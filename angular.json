@@ -27,9 +27,7 @@
               "src/assets"
             ],
             "styles": [
-              
               "src/styles.css"
-              
             ],
             "scripts": []
           },
@@ -100,6 +98,10 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }

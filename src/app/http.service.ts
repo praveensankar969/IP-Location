@@ -12,7 +12,7 @@ export class HttpService {
   }
 
   GetLocation()  {
-    return this.http.get<GeoInterface>("http://api.ipstack.com/check?access_key=e6d5204a6d88b1cf7041817ef0b3e34c");
+    return this.http.get<GeoInterface>("https://ipgeolocation.abstractapi.com/v1/?api_key=03e26f248bdc4b04ac58a592df979eae");
   }
 
   
