@@ -10,11 +10,15 @@ import { Observable } from 'rxjs';
 export class HttpService {
   obs : Observable<GeoInterface> = new Observable();
   constructor(private http : HttpClient) {
-    this.obs = this.http.get<GeoInterface>("http://api.ipstack.com/check?access_key=e6d5204a6d88b1cf7041817ef0b3e34c").pipe(shareReplay());
+    this.CallApi();
   }
 
   GetLocation(){
     return this.obs;
+  }
+
+  CallApi(){
+    this.obs = this.http.get<GeoInterface>("http://api.ipstack.com/check?access_key=e6d5204a6d88b1cf7041817ef0b3e34c").pipe(map(res=> {console.log(res); return res;}),shareReplay());
   }
 
   

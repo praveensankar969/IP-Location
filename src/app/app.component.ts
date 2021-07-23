@@ -11,18 +11,15 @@ import { GeoInterface } from './GeoInterface';
 export class AppComponent implements OnInit{
   locationChecked : boolean = false;
   mapUrl : string = "https://maps.google.com/maps?q=9.56566047668457,76.64415740966797&output=embed";
-  ip : string = "0.0.0.0";
   locData! : GeoInterface ;  
   constructor(private httpService :  HttpService, public sanitizer : DomSanitizer){
   }
 
   ngOnInit(){  
-    
+    this.httpService.GetLocation().subscribe(res=> this.locData = res);
   }
 
   OnClick(){
-    this.httpService.GetLocation().subscribe(res=> this.locData = res);
-    this.ip = this.locData.ip;
     this.locationChecked = true;
   }
   
