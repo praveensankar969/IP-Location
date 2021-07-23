@@ -1,8 +1,7 @@
 export interface GeoInterface{
     city : string;
-    country_name :string;
-    ip : string;
+    country :string;
+    ip_address : string;
     latitude : number;
     longitude : number;
-    zip : number;
 }
