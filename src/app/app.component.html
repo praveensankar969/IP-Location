@@ -9,8 +9,8 @@
       <iframe class="map" [src]="sanitizer.bypassSecurityTrustResourceUrl(mapUrl)" width="100%" height="450"
         style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
-    <div class="content" *ngIf="locData">
-      Geo location is based on your IP address {{locData.ip}}.
+    <div class="content" *ngIf="locationChecked">
+      Geo location is based on your IP address {{ip}}.
       No location access is needed. The location based on IP address is 90% accurate.
     </div>
   </ng-container>
